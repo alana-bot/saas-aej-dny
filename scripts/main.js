@@ -1,6 +1,10 @@
 newScript()
   .dialog((sessions, response) => {
-    response.sendText('How can I help you?');
+    if (session.message.type === 'greeting') {
+        // if we are comign from a greeting, don't send anything
+        return;
+    }
+    response.sendText('How else can I help you?');
   })
   .expect
     .intent('business', 'exchange', (session, response) => {
