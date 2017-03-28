@@ -1,6 +1,6 @@
 // Created Tue Mar 28 2017
 
-test('greeting', function() {
+test('exchange', function() {
   return newTest()
     .checkForTrailingDialogs(true)
     .expectText('Welcome to our online store')
