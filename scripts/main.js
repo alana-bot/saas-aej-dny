@@ -1,7 +1,7 @@
 newScript()
   .dialog((session, response) => {
     if (session.message.type === 'greeting') {
-        // if we are comign from a greeting, don't send anything
+        // if we are coming from a greeting, don't send anything
         return;
     }
     response.sendText('How else can I help you?');
