@@ -10,6 +10,6 @@ newScript()
       response.sendText('I can start the exchange process now');
     })
     .catch((session, response) => {
-
+      response.sendText('I don\'t understand, can you try again?');
     })
     
