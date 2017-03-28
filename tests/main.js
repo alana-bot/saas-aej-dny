@@ -5,8 +5,9 @@ test('greeting', function() {
     .run();
 })
 
-// test('returns', function() {
-//   return newTest('adam')
-//     .sendText('')
-//     .run();
-// })
+test('returns', function() {
+  return newTest('adam')
+    .checkForTrailingDialogs(true)
+    .sendText('are you in LA?')
+    .run();
+})
