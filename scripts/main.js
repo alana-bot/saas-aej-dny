@@ -11,5 +11,6 @@ newScript()
     })
     .catch((session, response) => {
       response.sendText('I don\'t understand, can you try again?');
+      console.log(session.intent);
     })
     
