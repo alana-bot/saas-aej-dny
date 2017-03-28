@@ -8,6 +8,10 @@ test('greeting', function() {
 test('returns', function() {
   return newTest('adam')
     .checkForTrailingDialogs(true)
-    .sendText('are you in LA?')
+    .expectText('Welcome to our online store')
+    .expectText('How can I help you?')
+    .sendText('need to return my last order')
+    .expectText('I can start the exchange process now')
+    .expectText('What is the order number?')
     .run();
 })
