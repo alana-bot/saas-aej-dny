@@ -1,5 +1,5 @@
 newScript()
-  .dialog((sessions, response) => {
+  .dialog((session, response) => {
     if (session.message.type === 'greeting') {
         // if we are comign from a greeting, don't send anything
         return;
