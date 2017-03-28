@@ -8,6 +8,7 @@ newScript()
     })
     .intent('business', 'return procedure', (session, response) => {
       response.sendText('I can start the exchange process now');
+      response.startScript('return');
     })
     .catch((session, response) => {
       response.sendText('I don\'t understand, can you try again?');
