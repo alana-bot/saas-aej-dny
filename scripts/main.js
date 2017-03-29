@@ -9,6 +9,7 @@ newScript()
   .expect
     .intent('business', 'exchange', (session, response) => {
       response.sendText('You\'ll need to email us at help@shop.com to do a return');
+      response.goto('start');
     })
     .intent('business', 'return procedure', (session, response) => {
       response.sendText('I can start the exchange process now');
