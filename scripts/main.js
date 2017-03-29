@@ -1,5 +1,5 @@
 newScript()
-  .dialog((session, response) => {
+  .dialog('start', (session, response) => {
     if (session.message.type === 'greeting') {
         // if we are coming from a greeting, don't send anything
         return;
@@ -17,5 +17,6 @@ newScript()
     .catch((session, response) => {
       response.sendText('I don\'t understand, can you try again?');
       console.log('unknown message', session.intent, session.message);
+      response.goto('start');
     })
     
