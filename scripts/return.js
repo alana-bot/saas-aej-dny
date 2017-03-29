@@ -11,7 +11,7 @@ newScript('return')
       const order = session.message.text;
       response.sendText(`I found order ${order} 👍`);
       response.sendText('Print the label, put label on the box, ship the box, get 💰')
-      response.sendButtons()
+      response.createButtons()
         .addButton('url', 'Get label', 'http://google.com')
         .send()
       /*
